@@ -1,9 +1,8 @@
 
-for i in 10 100 1000 10000 100000 1000000 10000000 100000000
+for i in 10 100 1000 10000 100000 1000000 10000000 20000000 30000000 40000000 50000000 60000000 70000000 80000000 90000000 100000000
 do
-(time  python $1.py 1 2 $i) 2> datanon.dat
+(time  python $1.py 1 2 $i) 2> data$1.dat
 echo -n $i ' '
-head -3 datanon.dat | tail -1 | cut -c8-12
+head -3 data$1.dat | tail -1 | cut -c8-12
 done
-
-rm datanon.dat
+rm data$1.dat
